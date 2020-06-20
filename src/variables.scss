@@ -1,0 +1,30 @@
+
+// COLORS
+$bg-color: #fbf5e9;
+
+$oliveGreen: #cac659;
+$darkGreen: #618a1f ;
+$gold: #f0ca5b;
+$darkgold: #dbad29;
+$orange: #d6560a;
+
+
+//FONTS
+@font-face {
+    font-family: 'Dancing Script', cursive;
+    src: url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&disply=swap');
+}
+
+@font-face {
+    font-family: 'Amatic SC', cursive;
+    src: url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
+}
+
+@font-face {
+    font-family: 'Raleway', sans-serif;
+    src: url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+}
+
+$titleFont: 'Dancing Script', cursive;
+$subtitleFont: 'Amatic SC', cursive;
+$mainFont: 'Raleway', sans-serif;
