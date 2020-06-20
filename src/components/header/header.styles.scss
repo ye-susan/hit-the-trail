@@ -1,9 +1,11 @@
+@import '../../variables';
+
 header {
   width: 100%;
 
   span {
     height: 150px;
-    font-family: 'Dancing Script';
+    font-family: $titleFont;
     font-size: 72px;
     font-weight: 700;
     letter-spacing: -3px;
@@ -18,6 +20,6 @@ header {
     display: flex;
     justify-content: space-evenly;
     padding-bottom: 30px;
-    border-bottom: 1px solid #cac659;
+    border-bottom: 1px solid $gold;
   }
 }

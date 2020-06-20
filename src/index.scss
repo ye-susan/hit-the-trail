@@ -1,3 +1,12 @@
+@import '/variables.scss';
+
 body {
   margin: 0;
+  background-color: $bg-color;
+  font-family: $mainFont;
+}
+
+a {
+  color: $oliveGreen;
+  text-decoration: none;
 }
