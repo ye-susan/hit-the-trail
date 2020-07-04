@@ -12,6 +12,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: $green;
   }
 
   nav {
@@ -20,6 +21,6 @@ header {
     display: flex;
     justify-content: space-evenly;
     padding-bottom: 30px;
-    border-bottom: 1px solid $gold;
+    border-bottom: 1px solid $oliveGreen;
   }
 }
