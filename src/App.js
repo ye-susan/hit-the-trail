@@ -3,14 +3,14 @@ import { Route, Switch } from 'react-router-dom';
 
 import './App.scss';
 
-import Homepage from './pages/homepage/homepage.component';
+import Trails from './pages/trails/trails.component';
 import Header from './components/header/header.component';
 
 const App = () => (
   <div className='App'>
     <Header />
     <Switch>
-      <Route exact path='/' component={Homepage} />
+      <Route exact path='/' component={Trails} />
     </Switch>
   </div>
 );
@@ -23,8 +23,8 @@ export default App;
  * - Filter: filter based on trail criteria (array will change as boxes are ticked off)
  * - User's List: list changes as user removes/adds trails to their personal list
  * - Selected Trail: if user selects trail --> map will show location of trail
- * 
- * Components to Build: 
+ *
+ * Components to Build:
  * X header
  * - SearchBar
  * - Filter list
