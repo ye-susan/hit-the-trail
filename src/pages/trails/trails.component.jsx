@@ -60,6 +60,7 @@ class Trails extends Component {
   render() {
     return (
       <div className='body'>
+        <h2>TRAILS</h2>
         {this.state.trails.map((trail, idx) => (
           <TrailInfo key={idx} idx={idx} {...trail} />
         ))}

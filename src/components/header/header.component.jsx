@@ -7,8 +7,8 @@ const Header = () => (
   <header>
     <span>Hit-the-Trail</span>
     <nav>
-      <Link to='/'>MAPS</Link>
       <Link to='/'>TRAILS</Link>
+      <Link to='/'>MAP</Link>
       <Link to='/'>SAVED LISTS</Link>
     </nav>
   </header>
