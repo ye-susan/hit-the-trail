@@ -4,6 +4,7 @@ import axios from 'axios';
 import './trails.styles.scss';
 
 import TrailInfo from '../../components/trail-info/trail-info.component';
+import Map from '../../components/map/map.component';
 
 class Trails extends Component {
   state = {
@@ -12,7 +13,20 @@ class Trails extends Component {
       lng: null
     },
     trails: [],
-    error: null
+    error: null,
+    trailCoordinates: {
+      lat: 37.7749,
+      lng: -122.4194
+    }
+  };
+
+  handleSelectTrail = (lat, lng) => {
+    this.setState({
+      trailCoordinates: {
+        lat,
+        lng
+      }
+    });
   };
 
   componentDidMount() {
@@ -31,7 +45,8 @@ class Trails extends Component {
     const { latitude, longitude } = pos.coords;
     this.setState(
       {
-        location: { lat: latitude, lng: longitude }
+        location: { lat: latitude, lng: longitude },
+        trailCoordinates: { lat: latitude, lng: longitude }
       },
       this.fetchTrails
     );
@@ -62,8 +77,17 @@ class Trails extends Component {
       <div className='body'>
         <h2>TRAILS</h2>
         {this.state.trails.map((trail, idx) => (
-          <TrailInfo key={idx} idx={idx} {...trail} />
+          <TrailInfo
+            key={idx}
+            idx={idx}
+            handleSelectTrail={this.handleSelectTrail}
+            {...trail}
+          />
         ))}
+        <Map
+          lat={this.state.trailCoordinates.lat}
+          lng={this.state.trailCoordinates.lng}
+        />
       </div>
     );
   }
