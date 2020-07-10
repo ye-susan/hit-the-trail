@@ -3,15 +3,11 @@
 header {
   width: 100%;
 
-  span {
-    height: 150px;
+  .title {
     font-family: $titleFont;
-    font-size: 72px;
+    font-size: 3em;
     font-weight: 700;
-    letter-spacing: -3px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
     color: $green;
   }
 
@@ -20,7 +16,16 @@ header {
     margin: 0 auto;
     display: flex;
     justify-content: space-evenly;
-    padding-bottom: 30px;
+    padding-bottom: 25px;
     border-bottom: 1px solid $oliveGreen;
   }
 }
+
+@media #{$below-mobile} {
+  header nav {
+    font-size: 0.95em;
+    padding-bottom: 20px;
+    width: 80%;
+  }
+}
+

@@ -5,11 +5,11 @@ import './header.styles.scss';
 
 const Header = () => (
   <header>
-    <span>Hit-the-Trail</span>
+    <h1 class="title">Hit-the-Trail</h1>
     <nav>
       <Link to='/'>TRAILS</Link>
       <Link to='/'>MAP</Link>
-      <Link to='/'>SAVED LISTS</Link>
+      <Link to='/'>LISTS</Link>
     </nav>
   </header>
 );

@@ -5,10 +5,6 @@ import './map.styles.scss';
 
 import Trails from '../../pages/trails/trails.component';
 
-const style = {
-  width: '100%',
-  height: '300px'
-};
 
 class Map extends Component {
   // constructor(props) {
@@ -31,7 +27,21 @@ class Map extends Component {
   }
 
   render() {
-    return <div id='map' style={style} />;
+    return (
+      <div>
+        <h2>MAP</h2>
+
+        {/* enables Leaflet to display correctly */}
+        <link
+          rel="stylesheet"
+          href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+          integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+          crossorigin=""
+        />
+        <div id='map' />
+        <br/>
+      </div>
+    );
   }
 }
 

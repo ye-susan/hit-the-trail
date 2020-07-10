@@ -16,7 +16,19 @@ $titleFont: 'Dancing Script', cursive;
 $subtitleFont: 'Amatic SC', cursive;
 $mainFont: 'Raleway', sans-serif;
 
+//SCREEN SIZES FOR MEDIA QUERIES
+$desktop-screen: 900px;
+$tablet-screen: 768px;
+$mobile-screen: 450px;
 
+$below-desktop: '(max-width: #{$desktop-screen - 1})';
+$tablet-up: '(min-width: #{$tablet-screen})';
+$below-tablet: '(max-width: #{$tablet-screen - 1})';
+$mobile-up: '(min-width: #{$mobile-screen})';
+$below-mobile: '(max-width: #{$mobile-screen - 1})';
+
+
+//TYPOGRAPHY
 h2 {
   color: $darkgold;
   text-decoration: underline;

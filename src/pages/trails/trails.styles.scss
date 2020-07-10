@@ -1,5 +1,13 @@
+@import '../../variables.scss';
+
 .body {
   padding-top: 50px;
   width: 60vw;
   margin: 0 auto;
+}
+
+@media #{$below-desktop} {
+  .body {
+    width: 80%;
+  }
 }
