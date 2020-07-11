@@ -5,7 +5,7 @@ import './header.styles.scss';
 
 const Header = () => (
   <header>
-    <h1 class="title">Hit-the-Trail</h1>
+    <h1 className='title'>Hit-the-Trail</h1>
     <nav>
       <Link to='/'>TRAILS</Link>
       <Link to='/'>MAP</Link>

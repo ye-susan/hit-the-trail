@@ -3,14 +3,16 @@ import { Route, Switch } from 'react-router-dom';
 
 import './App.scss';
 
-import Trails from './pages/trails/trails.component';
 import Header from './components/header/header.component';
+import Trails from './pages/trails/trails.component';
+import SignUp from './pages/signup/signup.component';
 
 const App = () => (
   <div className='App'>
     <Header />
     <Switch>
       <Route exact path='/' component={Trails} />
+      <Route path='/signup' component={SignUp} />
     </Switch>
   </div>
 );

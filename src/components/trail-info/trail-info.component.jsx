@@ -2,6 +2,8 @@ import React from 'react';
 
 import './trail-info.styles.scss';
 
+import ListButtons from '../list-buttons/list-buttons.component';
+
 const TrailInfo = ({
   name,
   summary,
@@ -17,9 +19,11 @@ const TrailInfo = ({
     <li className='trail-item'>
       <div className='item-info'>
         <span className='name-length-span'>
-          <h3 onClick={() => handleSelectTrail(latitude, longitude)}>
-            {idx + 1}. {name}
-          </h3>
+          <a href='#map'>
+            <h3 onClick={() => handleSelectTrail(latitude, longitude)}>
+              {idx + 1}. {name}
+            </h3>
+          </a>
           <h4>{length} miles long</h4>
         </span>
         <p>
@@ -29,6 +33,7 @@ const TrailInfo = ({
         <p>
           <strong>Summary:</strong> {summary}
         </p>
+        <ListButtons />
       </div>
       <img className='trail-img' alt='trees' src={imgSmall} />
     </li>

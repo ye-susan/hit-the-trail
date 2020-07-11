@@ -36,12 +36,7 @@ class Trails extends Component {
     );
   }
 
-  componentDidUpdate() {
-    console.log(this.state);
-  }
-
   getLocation = pos => {
-    console.log('getlocation');
     const { latitude, longitude } = pos.coords;
     this.setState(
       {
@@ -56,20 +51,20 @@ class Trails extends Component {
     this.setState({ error: err });
   };
 
-  fetchTrails = () => {
-    console.log('fetch trails ran');
+  fetchTrails = async () => {
     const KEY = process.env.REACT_APP_KEY;
 
-    axios
-      .get(
+    try {
+      const response = await axios.get(
         `https://www.hikingproject.com/data/get-trails?lat=${this.state.location.lat}&lon=${this.state.location.lng}&maxDistance=10&key=${KEY}`
-      )
-      .then(res =>
-        this.setState({
-          trails: res.data.trails.slice(0, 5)
-        })
-      )
-      .catch(err => console.log(err));
+      );
+
+      this.setState({ trails: response.data.trails.slice(0, 5) });
+
+      console.log(response);
+    } catch (err) {
+      console.log(err.message);
+    }
   };
 
   render() {
