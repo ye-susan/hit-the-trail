@@ -5,7 +5,7 @@ import './list-buttons.styles.scss';
 const ListButtons = () => {
   return (
     <div className='list-buttons'>
-      <button>-</button>
+      <button>➖</button>
       <button>⭐</button>
     </div>
   );
