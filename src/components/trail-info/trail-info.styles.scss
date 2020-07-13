@@ -3,7 +3,7 @@
 .trail-item {
   display: flex;
   justify-content: space-between;
-  margin: 0 auto;
+  margin: 20px;
 
   .item-info {
     flex: 1;
@@ -16,7 +16,6 @@
   .name-length-span {
     display: flex;
     justify-content: space-between;
-    // width: 40vw;
   }
 
   .trail-img {
@@ -52,9 +51,7 @@
       margin: 10px;
       align-self: center;
     }
-
   }
-
 }
 
 

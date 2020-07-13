@@ -24,7 +24,6 @@ class Map extends Component {
               </Popup>
             </Marker>
           </LeafletMap>
-          <br/>
         </div>
       </div>
     );
