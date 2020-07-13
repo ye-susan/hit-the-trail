@@ -10,20 +10,22 @@ class Map extends Component {
     return (
       <div id='map'>
         <h2>MAP</h2>
-        <LeafletMap center={position} zoom={16}>
-          <TileLayer
-            url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
-            attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-          />
-          <Marker position={position}>
-            <Popup>
-              A pretty CSS3 popup.
-              <br />
-              Easily customizable.
-            </Popup>
-          </Marker>
-        </LeafletMap>
-        <br />
+        <div className="section-container">
+          <LeafletMap center={position} zoom={16}>
+            <TileLayer
+              url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
+              attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+            />
+            <Marker position={position}>
+              <Popup>
+                A pretty CSS3 popup.
+                <br/>
+                Easily customizable.
+              </Popup>
+            </Marker>
+          </LeafletMap>
+          <br/>
+        </div>
       </div>
     );
   }

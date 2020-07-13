@@ -35,7 +35,7 @@ const TrailInfo = ({
         </p>
         <ListButtons />
       </div>
-      <img className='trail-img' alt='trees' src={imgSmall} />
+      <img className='trail-img' alt='hiking trail' src={imgSmall} />
     </li>
   );
 };

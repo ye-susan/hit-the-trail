@@ -2,7 +2,6 @@
 
 .App {
   text-align: center;
-  // margin: 0 10%;
 }
 
 body {
@@ -15,4 +14,22 @@ a {
   color: $darkgold;
   text-decoration: none;
   font-weight: bold;
+}
+
+.container {
+  padding-top: 30px;
+  margin: 0 20% auto;
+}
+
+.section-container {
+  background-color: #fffcf5;
+  border-radius: 1px solid white;
+  border-radius: 10px;
+  padding: 30px;
+}
+
+@media #{$below-desktop} {
+  .container {
+    margin: 0 10% auto;
+  }
 }

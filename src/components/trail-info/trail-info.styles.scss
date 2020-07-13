@@ -3,24 +3,24 @@
 .trail-item {
   display: flex;
   justify-content: space-between;
-  margin: 30px 0;
+  margin: 0 auto;
 
   .item-info {
     flex: 1;
     display: flex;
     flex-direction: column;
     text-align: left;
-    margin: 0 5%;
+    margin: 0 5% auto;
   }
 
   .name-length-span {
     display: flex;
     justify-content: space-between;
-    width: 40vw;
+    // width: 40vw;
   }
 
   .trail-img {
-
+    height: 100%;
   }
 
   p {
@@ -41,7 +41,7 @@
       display: flex;
       flex-direction: column;
       text-align: left;
-      margin: 0 5%;
+      margin: 0 5% auto;
     }
   
     .name-length-span {
@@ -49,7 +49,7 @@
     }
 
     .trail-img {
-      height: 150px;
+      margin: 10px;
       align-self: center;
     }
 
@@ -61,10 +61,11 @@
 @media #{$below-mobile} {
   .trail-item {
     flex-wrap: wrap;
+    margin: 0 auto;
 
     .trail-img {
       width: 70%;
-      margin: auto;
+      margin: 20px auto;
     }
 
     .name-length-span {

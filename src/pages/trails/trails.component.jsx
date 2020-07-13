@@ -69,21 +69,23 @@ class Trails extends Component {
 
   render() {
     return (
-      <div className='body'>
+      <div className='container'>
         <h2>TRAILS</h2>
-        {this.state.trails.map((trail, idx) => (
-          <TrailInfo
-            key={idx}
-            idx={idx}
-            handleSelectTrail={this.handleSelectTrail}
-            {...trail}
+        <div className='section-container'>
+          {this.state.trails.map((trail, idx) => (
+            <TrailInfo
+              key={idx}
+              idx={idx}
+              handleSelectTrail={this.handleSelectTrail}
+              {...trail}
+            />
+          ))}
+        </div>
+          <Map
+            lat={this.state.trailCoordinates.lat}
+            lng={this.state.trailCoordinates.lng}
           />
-        ))}
-        <Map
-          lat={this.state.trailCoordinates.lat}
-          lng={this.state.trailCoordinates.lng}
-        />
-      </div>
+        </div>
     );
   }
 }
